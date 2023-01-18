@@ -1,4 +1,4 @@
-print('load disable things')
+--print('load disable things')
 -- disable 一些自带的功能 keymap command等
 -- @problem 1: 使用lvim的删除方法不会立即生效需要重启lvim
 -- @problem 2: 使用vim自带的方式可以立马生效但是下次启动还有且需要lvimreload
