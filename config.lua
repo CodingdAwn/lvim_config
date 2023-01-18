@@ -1,9 +1,9 @@
--- general
 lvim.log.level = "info"
+-- general
 lvim.format_on_save = {
-  enabled = true,
-  pattern = "*.lua",
-  timeout = 1000,
+    enabled = true,
+    pattern = "*.lua",
+    timeout = 1000,
 }
 
 -- keymappings <https://www.lunarvim.org/docs/configuration/keybindings>

@@ -1,7 +1,10 @@
-print('load dawn init c')
+print('load dawn init')
+
+-- disable someting default
+reload('dawn.disable_things')
 
 -- load plugins config
-reload('dawn.configs')
+reload('dawn.default_plugins')
 
 -- load custom options
 reload('dawn.options')

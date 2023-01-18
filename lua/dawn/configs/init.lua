@@ -1,3 +1,3 @@
-print('load configs init')
+-- print('load custom plugin config')
 
-reload('dawn.configs.nvim-tree')
+-- Nothing

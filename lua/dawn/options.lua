@@ -1,4 +1,4 @@
-print('load options')
+--print('load options')
 
 -- TODO 把opt的设置 keymap au function都分离开 插件的配置也分开
 -- relative number
@@ -27,12 +27,12 @@ vim.cmd('filetype plugin on')
 vim.cmd('syntax on')
 
 if vim.fn.has('multi_byte') == 1 then
-  -- 内部工作编码
-  vim.opt.encoding = "utf-8"
-  -- 文件默认编码
-  vim.opt.fileencoding = "utf-8"
-  -- 打开文件时自动尝试下面顺序的编码
-  vim.opt.fileencodings = "ucs-bom,utf-8,gbk,gb18030,big5,euc-jp,latin1"
+    -- 内部工作编码
+    vim.opt.encoding = "utf-8"
+    -- 文件默认编码
+    vim.opt.fileencoding = "utf-8"
+    -- 打开文件时自动尝试下面顺序的编码
+    vim.opt.fileencodings = "ucs-bom,utf-8,gbk,gb18030,big5,euc-jp,latin1"
 end
 
 -- 设置 tags：当前文件所在目录往上向根目录搜索直到碰到 .tags 文件
@@ -52,13 +52,13 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 
 vim.api.nvim_create_autocmd('BufRead', {
-  desc = 'set python tab config',
-  group = vim.api.nvim_create_augroup('pythontab', { clear = true }),
-  callback = function(opts)
-    if vim.bo[opts.buf].filetype == 'python' then
-      vim.opt_local.sw = 4
-      vim.opt_local.ts = 4
-      vim.opt_local.expandtab = false
-    end
-  end,
+    desc = 'set python tab config',
+    group = vim.api.nvim_create_augroup('pythontab', { clear = true }),
+    callback = function(opts)
+        if vim.bo[opts.buf].filetype == 'python' then
+            vim.opt_local.sw = 4
+            vim.opt_local.ts = 4
+            vim.opt_local.expandtab = false
+        end
+    end,
 })
