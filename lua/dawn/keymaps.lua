@@ -35,10 +35,14 @@ vim.keymap.set("n", "K", util.show_docs, { desc = 'Hover Documentation', silent 
 
 -- cd releated
 vim.keymap.set('n', '<a-r>', util.cwd_git_root, { desc = 'cwd to git root' })
-vim.keymap.set('n', '<leader>cof', util.home_neovim_config, { desc = 'open lvim config init.lua' })
-vim.keymap.set('n', '<leader>cd', util.cd_current_buff_directory, { desc = 'cwd with current buff' })
+lvim.keys.normal_mode['<leader>cof'] = '<cmd>:GitRoot<CR>'
+lvim.keys.normal_mode['<leader>cd'] = '<cmd>:CDDOT<CR>'
 
 ----------------------------------------------------------------------
 -- 在当前光标下输出时间
 ----------------------------------------------------------------------
-vim.keymap.set("n", "<leader>da", util.put_date_at_cursor, { desc = 'Put current date at cursor pos', silent = true })
+lvim.keys.normal_mode['<leader>da'] = '<cmd>:PutDate<CR>'
+
+lvim.builtin.which_key.mappings["t"] = {
+    name = "translator & terminal",
+}

@@ -32,10 +32,11 @@ local function on_attach(client, _)
         return
     end
 
+    --[[
     if vim.g.loaded_mono == 2 then
         return
     end
-
+    ]]
     vim.g.loaded_mono = 2
     print('load mono first')
     client.server_capabilities.semanticTokensProvider = {

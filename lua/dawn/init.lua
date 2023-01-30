@@ -6,6 +6,9 @@ reload('dawn.disable_things')
 -- load plugins config
 reload('dawn.default_plugins')
 
+-- load core module
+reload('dawn.core')
+
 -- load custom options
 reload('dawn.options')
 
