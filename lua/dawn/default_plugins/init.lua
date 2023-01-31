@@ -3,3 +3,4 @@
 reload('dawn.default_plugins.nvim-tree')
 reload('dawn.default_plugins.lsp')
 reload('dawn.default_plugins.terminal')
+reload('dawn.default_plugins.bufferline')
