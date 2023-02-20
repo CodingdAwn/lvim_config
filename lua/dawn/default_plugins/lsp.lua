@@ -2,33 +2,10 @@
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'diagnostic prev' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'diagnostic next' })
 
--- deprecated use default keymap gl
-lvim.builtin.which_key.mappings['lo'] =
-{ '<cmd>lua vim.diagnostic.open_float()<cr>', 'diagnostic open open_float' }
-
--- clangd switch source and header file
-lvim.lsp.buffer_mappings.normal_mode['<leader>aa'] = {
-    function()
-        vim.cmd([[ClangdSwitchSourceHeader]])
-    end, "switch source header file"
-}
-lvim.lsp.buffer_mappings.normal_mode['<leader>av'] = {
-    function()
-        vim.cmd('vsplit')
-        vim.cmd([[ClangdSwitchSourceHeader]])
-    end, "switch source header file"
-}
-lvim.lsp.buffer_mappings.normal_mode['<leader>ah'] = {
-    function()
-        vim.cmd('split')
-        vim.cmd([[ClangdSwitchSourceHeader]])
-    end, "switch source header file"
-}
-
 -- c sharp lsp config
 --local function on_attach(client, bufnr)
 local function on_attach(client, _)
-    if client.name ~= 'omnisharp_mono' then
+    if client.name ~= 'omnisharp' then
         return
     end
 
@@ -115,6 +92,3 @@ local function on_attach(client, _)
 end
 
 lvim.lsp.on_attach_callback = on_attach
--- require('lspconfig')['omnisharp_mono'].setup{
---   on_attach = on_attach,
--- }
