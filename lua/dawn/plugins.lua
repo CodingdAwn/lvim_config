@@ -16,10 +16,13 @@ lvim.plugins = {
     {
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
-    }
+    },
+    -- git
+    { "tpope/vim-fugitive" },
 }
 
 -- 放在上面的话 需要使用LvimReload之后 才能立马生效
 require('dawn.configs.vim-translator').setup()
 require('dawn.configs.vimwiki').setup()
 require('dawn.configs.onedarkpro').setup()
+require('dawn.configs.fugitive').setup()
