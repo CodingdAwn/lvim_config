@@ -40,4 +40,12 @@ function M.put_date_at_cursor()
     vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { date_string })
 end
 
+----------------------------------------------------------------------
+-- 将windows换行符转换成unix的 ctrl-v ctrl-m打出^M"
+----------------------------------------------------------------------
+--[[
+function M.transfer_lf()
+  vim.api.nvim_command(':%s/$//g')
+end
+]]
 return M
