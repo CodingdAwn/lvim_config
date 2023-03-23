@@ -2,6 +2,9 @@
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'diagnostic prev' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'diagnostic next' })
 
+lvim.builtin.which_key.mappings['lo'] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "diagnostic open float" }
+--vim.builtin.set("n", "<leader>lo", vim.diagnostic.open_float, { desc = 'diagnostic open float' })
+
 -- c sharp lsp config
 --local function on_attach(client, bufnr)
 local function on_attach(client, _)
