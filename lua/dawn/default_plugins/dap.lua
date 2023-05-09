@@ -15,6 +15,7 @@ dap.configurations.cs = {
             return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/Bin/', 'file')
         end,
         --        args = { "--Console=1" },
-        cwd = "${workspaceFolder}/Bin/"
+        cwd = "${workspaceFolder}/bin/",
+        justMyCode = true
     },
 }

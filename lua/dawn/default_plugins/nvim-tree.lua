@@ -1,8 +1,10 @@
 --print('load nvim tree')
 -- set termguicolors to enable highlight groups
+--[[
 vim.opt.termguicolors = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+--]]
 
 --[[
 lvim.builtin.nvimtree.setup.view.mappings.list = {
@@ -14,13 +16,6 @@ lvim.builtin.nvimtree.setup.view.mappings.list = {
 }
 ]]
 
-lvim.builtin.nvimtree.setup.view.mappings.list[#lvim.builtin.nvimtree.setup.view.mappings.list + 1] =
-{ key = "u", action = "dir_up" }
-
-lvim.builtin.nvimtree.setup.view.mappings.list[#lvim.builtin.nvimtree.setup.view.mappings.list + 1] =
-{ key = "cd", action = "cd" }
-
---lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {"gdb", "tg", "GNU Debugger"}
 lvim.builtin.which_key.mappings["e"] = {
     name = "nvim-tree",
     c = { "<cmd>NvimTreeFocus<CR>", "NvimTreeFocus" },

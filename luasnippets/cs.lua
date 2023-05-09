@@ -1,3 +1,11 @@
+local function simple_restore(args, _)
+    return sn(nil, { i(1, args[1]), i(2, "user_text") })
+end
+
+local function simple_restore2(args, _)
+    return sn(nil, { i(1, args[1]), r(2, "dyn", i(nil, "user_text")) })
+end
+
 -- complicated function for dynamicNode.
 local function jdocsnip(args, _, old_state)
     -- !!! old_state is used to preserve user-input here. DON'T DO IT THAT WAY!
