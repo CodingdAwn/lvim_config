@@ -1,10 +1,8 @@
 --print('load nvim tree')
 -- set termguicolors to enable highlight groups
---[[
 vim.opt.termguicolors = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
---]]
 
 --[[
 lvim.builtin.nvimtree.setup.view.mappings.list = {
