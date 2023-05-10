@@ -3,7 +3,13 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'diagnostic prev' }
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'diagnostic next' })
 
 lvim.builtin.which_key.mappings['lo'] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "diagnostic open float" }
---vim.builtin.set("n", "<leader>lo", vim.diagnostic.open_float, { desc = 'diagnostic open float' })
+
+--lvim.keys.noremap['gv'] = '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>'
+-- 这个还有问题 使用后 可能会导致vim的排版乱了
+vim.keymap.set('n', 'gv', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>',
+    { desc = 'vsplit definitions' })
+vim.keymap.set('n', 'gh', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="split"})<CR>',
+    { desc = 'split definitions' })
 
 -- c sharp lsp config
 --local function on_attach(client, bufnr)
