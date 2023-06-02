@@ -101,3 +101,6 @@ local function on_attach(client, _)
 end
 
 lvim.lsp.on_attach_callback = on_attach
+
+-- 这样会跳过lvim自动setup，手动的setup在 ftplugin/cs.lua
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "csharp_ls" })
