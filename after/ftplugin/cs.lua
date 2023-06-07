@@ -5,6 +5,7 @@
 --require("lvim.lsp.manager").setup("omnisharp_mono")
 
 -- 手动设置root_dir，当前的csharp_lsp不会自动找到sln
+--[[
 local nvim_lsp = require 'lspconfig'
 local opts = {
     root_dir = function(startpath)
@@ -13,3 +14,5 @@ local opts = {
     end,
 }
 require("lvim.lsp.manager").setup("csharp_ls", opts)
+]]
+require("lvim.lsp.manager").setup("omnisharp", {})
