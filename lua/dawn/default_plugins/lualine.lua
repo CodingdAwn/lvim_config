@@ -1,1 +1,1 @@
-lvim.builtin.lualine.style = "default"
+--lvim.builtin.lualine.style = "default"

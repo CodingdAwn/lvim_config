@@ -30,9 +30,6 @@ vim.keymap.set('i', '<c-l>', '<right>', { desc = 'move windows' })
 vim.keymap.set('i', '<c-j>', '<down>', { desc = 'move windows' })
 vim.keymap.set('i', '<c-k>', '<up>', { desc = 'move windows' })
 
--- deprecated
-vim.keymap.set("n", "K", util.show_docs, { desc = 'Hover Documentation', silent = true })
-
 -- cd releated
 vim.keymap.set('n', '<a-r>', util.cwd_git_root, { desc = 'cwd to git root' })
 lvim.keys.normal_mode['<leader>cof'] = '<cmd>:GitRoot<CR>'
@@ -42,7 +39,3 @@ lvim.keys.normal_mode['<leader>cd'] = '<cmd>:CDDOT<CR>'
 -- 在当前光标下输出时间
 ----------------------------------------------------------------------
 lvim.keys.normal_mode['<leader>da'] = '<cmd>:PutDate<CR>'
-
-lvim.builtin.which_key.mappings["t"] = {
-    name = "translator & terminal",
-}

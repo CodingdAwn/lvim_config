@@ -4,6 +4,7 @@
 -- @problem 2: 使用vim自带的方式可以立马生效但是下次启动还有且需要lvimreload
 
 -- disable keymaps
+-- TODO disable keymap没有用啊，除非后面加载插件过程中不会设置新的map
 -- leader w 影响所有的wiki的快捷键
 lvim.builtin.which_key.mappings['w'] = {}
 
