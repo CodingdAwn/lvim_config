@@ -4,12 +4,10 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'diagnostic next' }
 
 lvim.builtin.which_key.mappings['lo'] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "diagnostic open float" }
 
---lvim.keys.noremap['gv'] = '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>'
--- 这个还有问题 使用后 可能会导致vim的排版乱了
-vim.keymap.set('n', 'gv', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>',
-    { desc = 'vsplit definitions' })
-vim.keymap.set('n', 'gh', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="split"})<CR>',
-    { desc = 'split definitions' })
+-- 如果是只有一条结果的话会根据jump_type打开
+-- 但是如果有多个结果的话会弹出picker来选择，所以这种还是使用telescope的快捷键去开
+lvim.keys.normal_mode['gv'] = '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>'
+lvim.keys.normal_mode['gh'] = '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="split"})<CR>'
 
 -- c sharp lsp config
 --local function on_attach(client, bufnr)
